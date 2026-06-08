@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio Digital</title>
+    <link rel="stylesheet" href="s04.css"
+</head>
+<body>
+
+    <header>
+        <h1>hola, soy fernanda</h1>
+        <p>bienvenido a mi primer portafolio web</p>
+        <button id="btn-tema">cambiar a modo oscuro</button>
+    </header>
+
+    <nav>
+        <button id="btn-menu"=></button>
+        <ul id="menu-navegacion">
+            <li><a href="#sobre-mi">sobre mi</a></li>   
+            <li><a href="#proyectos">mis proyectos</a></li>       
+            <li><a href="#contacto">contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="sobre-mi">
+            <h2>sobre mi</h2>
+            <p>soy estudiante de preparatoria y estoy aprendiendo a construir la web del futuro utilizando codigo limpio y tecnologias modernas</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>mis proyectos</h2>
+            <p>en esta seccion mostrare los trabajos practicos que desarrollare a lo largo de este curso</p>
+        
+            <div class="contenedor-proyectos" id="contenedor-proyectos">
+
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>contactame</h2>
+            <p></p>
+
+            <form id="formulario-contacto">
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre;</label>
+                    <input type="text" id="nombre" placeholder="fernanda rossana marquez avila">
+                </div>
+
+                <div class="grupo formulario">
+                    <label for="correo">correo electronico</label>
+                    <input type="email" id="correo" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="5" placeholder="escribe tu mensaje aqui..."></textarea>
+                </div>
+
+                <button type="submit" id="btn-enviar">enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>creado con esfuerzo, codigo y mucha creatividad. 2026</p>
+    </footer>
+
+    <div id="modal-proyecto" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="btn-cerrar-modal">&times;</span>
+            <h3 id="modal-titulo">Titulo del proyecto</h3>
+            <p id="modal-desc">Descripcion detallada del proyecto aparecera aqui.</p>
+        </div>
+    </div>
+
+    <script src="s09.js"></script>
+</body>
+</html>
