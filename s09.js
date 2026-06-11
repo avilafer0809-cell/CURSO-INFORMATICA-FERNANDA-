@@ -54,6 +54,43 @@ botonesAbrirModal.forEach(function(boton) {
         const indiceExtraido = boton.getAttribute("data-indice");
         const proyectoSeleccionado = listaProyectos[indiceExtraido];
 
-        
+        modalTitulo.textContent = proyectoSeleccionado.titulo;
+        modalDesc.textContent = proyectoSeleccionado.descripcion;
+
+        modal.style.display = "flex";
     })
 })
+
+btnCerrarModal.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function(evento) {
+    if (evento.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+const formulario = document.getElementById("formulario-contacto");
+
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    const inputNombre = document.getElementById("nombre").value.trim();
+    const inputCorreo = document.getElementById("correo").value.trim();
+    const inputMensaje = document.getElementById("mensaje").value.trim();
+
+    if (inputNombre === "" || inputCorreo === "" || inputNombre === "") {
+        alert("¡Error! Por favor, llena todos los campos antes de enviar.");
+    } else {
+        alert("¡Exito! tu mensaje ha sido enviado correctamente.");
+        formulario.reset();
+    }
+});
+
+const btnMenu = document.getElementById("btn-menu");
+const menuNavegacion = document.getElementById("menu-navegacion");
+
+btnMenu.addEventListener("click", function() {
+    menuNavegacion.classList.toggle("menu-activo");
+});
